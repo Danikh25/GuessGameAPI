@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Guess Game</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background:
+            url('BullsCows.png') left top / 10% no-repeat, 
+            url('CowsBulls.png') right top / 9% no-repeat,
+            rgb(255, 215, 0);
+        }
+        #mainHeading {
+            margin-top: 20px;
+            text-align: center;
+            color: #6c757d;
+        }
+        #allGames {
+            margin-top: 20px;
+            border: 1px solid #6c757d;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        #allRounds {
+            margin-top: 20px;
+            border: 1px solid #6c757d;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        #currentRounds {
+            margin-top: 20px;
+            border: 1px solid #6c757d;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="mainHeading">Bulls And Cows!</h1>
+        <div style="font-family: Arial, sans-serif; margin: 20px;">
+            <p style="font-size: 1.2em;">In each game, you have to guess a 4-digit number where every digit is different. For each round, you have to guess a number and you will see the exact and partial digit matches.</p>
+            <h3 style="color: #6c757d;">Rules:</h3>
+            <ul style="font-size: 1.2em;">
+                <li>An exact match occurs when the user guesses the correct digit in the correct position.</li>
+                <li>A partial match occurs when the user guesses the correct digit but in the wrong position.</li>
+                <li>Once the number is guessed (exact matches for all digits) the user wins the game.</li>
+            </ul>
+        </div>
+        
+        <button id="startGame" class="btn btn-primary">Start New Game</button>
+        <button id="toggleGames" class="btn btn-secondary">Show All Games</button>
+        <form id="gameForm">
+            <label for="gameId">Enter Game ID:</label>
+            <input type="number" id="gameId" name="gameId" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <form id="guessForm">
+            <label for="gameIdGuess">Enter Game ID:</label>
+            <input type="number" id="gameIdGuess" name="gameIdGuess" required>
+            <label for="guess">Enter Your Guess:</label>
+            <input type="text" id="guess" name="guess" required>
+            <button type="submit" class="btn btn-primary">Submit Guess</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>All games</h2>
+                <div id="allGames">
+                </div>
+            </div>
+            <div class="col">
+                <h2>Game rounds</h2>
+                <div id="allRounds">
+                </div>
+            </div>
+            <div class="col">
+                <h2>Current rounds</h2>
+                <div id="currentRounds">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
