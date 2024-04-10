@@ -31,8 +31,11 @@ This is the API for the game **Bulls And Cows**.
 5. **Rounds/{gameId}**
     - Method: `GET`
     - Description: Returns a list of rounds for the specified game sorted by time.
+      
 ## Technologies Used
-
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![MySQL](https://shields.io/badge/MySQL-lightgrey?logo=mysql&style=plastic&logoColor=white&labelColor=blue)
+![JavaScript](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)
 
 
 
